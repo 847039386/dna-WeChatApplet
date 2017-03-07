@@ -1,0 +1,17 @@
+/* pages/filmReviewDetail/filmReviewDetail.wxss */
+
+.weui-article{
+    padding: 5px 15px;
+}
+
+.page__hd { padding-bottom: 15px; padding-left: 25px; padding-right: 25px;}
+
+.p { margin: 8px 0; }
+
+
+
+
+
+
+
+

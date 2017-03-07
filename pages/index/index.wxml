@@ -1,0 +1,12 @@
+<import src="../../templates/home/home"/>
+
+
+<template is="home-show-swiper" data="{{swipers : swipers}}"/>
+<template is="home-show-it" data="{{datas :movies}}"/>
+<template is="home-show-iost" />
+<template is="home-show-filmRes" data="{{filmReviews : filmReviews}}"/>
+
+
+
+
+

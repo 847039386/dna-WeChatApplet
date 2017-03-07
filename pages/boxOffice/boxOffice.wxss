@@ -1,0 +1,18 @@
+/* pages/boxOffice/boxOffice.wxss */
+.hidden{ overflow: hidden }
+
+.picker_date{ width: 100% ; background: #FFF; border-bottom: 1px solid #CCC; overflow: hidden;}
+.date_title{ width: 40%; padding: 12px 0; text-align: center; float: left; color: #FFF; background: orangered;  }
+.date_time{ width: 60%; padding: 12px 0; text-align: center; float: left; color: red; }
+
+.item-movie{ margin-bottom: 10px; border-bottom: 1px solid #CCC; border-top: 1px solid #CCC;  background: #FFF; }
+.item-movie .title{ text-align: center; color: #3498DB; font-size: 14px; padding: 6px 0; }
+.item-movie .br{ width: 94%; border-bottom: 1px solid #CCC; height: 1px; margin: auto;}
+
+.item-movie .l_b{ width: 32%; border-left: 1px solid #CCC; text-align: center; float: left; font-size: 12px; padding: 5px 0; }
+.item-movie .c_b{ width: 33%; text-align: center; float: left; font-size: 12px; padding: 5px 0;}
+.item-movie .r_b{ width: 32%; border-right: 1px solid #CCC; text-align: center; float: left; font-size: 12px; padding: 5px 0;}
+
+.item-movie .film{ margin: 8px 0; }
+.item-movie .film_days{ font-size: 12px; float: right; text-align: center; width: 48%; color: green; }
+.item-movie .film_realTime{ font-size: 13px; color: red; float: left; text-align: center; width: 48%; }

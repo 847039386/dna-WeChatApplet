@@ -1,0 +1,33 @@
+<picker mode="date" bindchange="bindDateChange" value="{{date_time}} "start="2011-01-01" end="{{ end_date_time }}" >
+    <view class="picker_date" >
+        <view class="date_title" >按时间查找：</view>
+        <view class="date_time" >{{date_time}}</view>
+    </view>
+</picker>
+
+<view>
+    <view class="item-movie"  wx:for="{{movies}}" wx:key="pf_movie" wx:for-item="movie" bindtap="getMovie" data-id="{{movie._id}}">
+        <view class="title">{{movie.name}}</view>
+        <view class="br"></view>
+        <view class="hidden">
+            <view class="r_b">
+                <view>票房占比</view>
+                <view>{{movie.film_zb}}</view>
+            </view>
+            <view class="c_b">
+                <view>拍片占比</view>
+                <view>{{movie.paipian_zb}}</view>
+            </view>
+            <view class="l_b">
+                <view>上座率</view>
+                <view>{{movie.attendance}}</view>
+            </view>
+        </view>
+        <view class="br"></view>
+        <view class="film hidden">
+            <view class="film_days">上映时间：{{movie.film_days}}</view>
+            <view class="film_realTime">总票房：{{movie.film_realTime}}万</view>
+        </view>
+    </view>
+</view>
+  

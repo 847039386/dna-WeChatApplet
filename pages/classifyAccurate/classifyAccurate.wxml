@@ -1,0 +1,14 @@
+
+
+<view wx:for="{{classifys}}" wx:key="classifys" wx:for-item="classify" >
+    <view class="weui-cells__title">{{ classify.title }}</view>
+    <view  class="weui-cells weui-cells_after-title">
+                <navigator wx:for="{{classify.group}}" wx:key="classify" wx:for-item="group"  url="../list/list?path={{group.path}}&&_type=fl" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                    <view class="weui-cell__bd">{{ group.title }}</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </navigator>            
+    </view>
+</view>
+
+
+

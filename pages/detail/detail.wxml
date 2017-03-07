@@ -1,0 +1,89 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">{{Article.name}}({{Article.year}})</view>
+    </view>  
+</view>
+<view class="Grid">
+    <view class="Grid-cell cell-u-1of-3">
+        <image  src="{{Article.poster_url}}"></image>
+    </view>
+    <view class="Grid-cell cell-u-1of-3-2 movies_card">
+        <view class="mt2">{{Article.other_name}}</view>
+        <view class="mt3">豆瓣 {{Article.score}}分 / {{Article.rate_count}}人评价</view>
+        <view class="mt3">IMDB：{{Article.imdb_score}}分 / {{Article.imdb_rate_count}}人评价</view>
+        <view class="mt3">类型：{{Article.types}}</view>
+        <view class="mt1">语言：{{Article.languages}}</view>
+        <view class="mt1">制片地区：{{Article.regions}}</view>
+    </view>
+</view>
+
+<view class="page__bd">
+    <view class="weui-cells__title">影视简介</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">{{Article.summary}}</view>
+        </view>
+    </view>
+</view>
+
+<view class="page__bd">
+    <view class="weui-cells__title">影片趋势</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd te_block">评论人数：{{Article.rate_count}} ({{Article.increase_rate_discover_pass_hour}} 上升 
+                <text class="te_green">{{Article.increase_rate_count}} </text>  )
+            </view>
+            
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__bd te_block">影片分数：{{Article.imdb_score}}   (
+                <text wx:if="{{Article.score_difference >= 0}}" class="te_green">+</text><text class="{{Article.score_difference_class}}">{{Article.score_difference}}</text>) 
+            </view>
+            
+        </view>
+    </view>
+</view>
+
+<view class="page__bd" wx:if="{{Article.maoyan_id}}">
+    <view class="weui-cells__title">猫眼数据</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd te_block">猫眼观众评分 ：<text class="te_red">{{Article.maoyan_id.score}}</text>分  , 
+            猫眼专家评分 ：<text class="te_red">{{Article.maoyan_id.z_score}}</text>分</view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__bd te_block">
+                <view>累计票房 ： <text class="te_green">{{Article.maoyan_id.total_bo / 10000}}</text> 万</view>
+                <view>首周票房 ： <text class="te_green">{{Article.maoyan_id.week_bo / 10000}}</text> 万</view>
+                <view>首日票房 ： <text class="te_green">{{Article.maoyan_id.day_bo / 10000}}</text> 万</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">详细资料</view>
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text te_red te_14">影视别名</view>
+                    <view class="weui-media-box__desc text-non">{{ Article.other_names}}</view>
+                </view>
+                <view class="weui-media-box weui-media-box_text ">
+                    <view class="weui-media-box__title weui-media-box__title_in-text te_red te_14">导演</view>
+                    <view class="weui-media-box__desc text-non">{{ Article.directors}}</view>
+                </view>
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text te_red te_14">编剧</view>
+                    <view class="weui-media-box__desc text-non">{{ Article.writers}}</view>
+                </view>
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text te_red te_14">主演</view>
+                    <view class="weui-media-box__desc text-non">{{ Article.stars}}</view>
+                </view>
+            </view>
+</view>
+
+
+
+
+

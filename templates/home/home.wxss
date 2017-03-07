@@ -1,0 +1,19 @@
+.weui-cell { font-size: 13px;}
+.weui-cell-boxx { padding-bottom: 5px; }
+
+.list-hot1{ padding:4px 10px 6px;  white-space: nowrap; box-sizing: border-box; }
+.single { width: 95px; margin-right: 10px; display: inline-block; vertical-align: top;  }
+.single image { width: 80px; height: 110px; margin-bottom: 3px;  padding: 4px; border: 1px solid #CCC; border-radius: 3px;  }
+.single .title{  font-size: 12px;width: 82px; white-space:pre-wrap; padding: 2px 4px;  overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1; }
+
+.abs { position: absolute; bottom: 0; height: 40px; text-align: center; color: #FFF; width: 100%; font-size: 13px; line-height: 40px; text-overflow:ellipsis;  background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 1)) }
+.bm-10 { margin-bottom: 10px; }
+.fh-item { font-size:13px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;}
+
+.scroll-view_H{ white-space: nowrap; }
+.scroll-view-item{ height: 200px; }
+.scroll-view-item_H{ display: inline-block; width: 100%; height: 200px; }
+
+.list-hot2{ padding:5px 0px 5px; height: 100px; white-space: nowrap; box-sizing: border-box;}
+.f_ios_tj{ width: 160px; height: 85px; border-radius: 8px; border: 1px solid #F8F8F8; overflow: hidden;  background: orange; display: inline-block; margin: 0 5px; }
+.f_ios_tj image{ width: 160px; height: 85px; }

@@ -1,0 +1,20 @@
+<template name="listImgText">
+<view class="page__bd">
+        <view class="weui-panel weui-panel_access">     
+            <view class="weui-panel__bd">
+                <navigator wx:for="{{movies}}" wx:key="movies_key" wx:for-item="movie" url="../detail/detail?id={{movie._id}}" class="weui-media-box weui-media-box_appmsg" 
+hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="{{movie.poster_url}}" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">{{movie.name}}</view>
+                        <view class="weui-media-box__desc score"> {{movie.score}}分 <span class="comment_count">{{movie.rate_count}}人评论</span></view>         
+                        <view class="weui-media-box__desc">{{movie.year}}/{{movie.regions}}</view>                  
+                    </view>
+                </navigator>
+            </view>
+            
+        </view>
+</view>
+</template>

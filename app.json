@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/about/about",
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/classify/classify",
+    "pages/classifyAccurate/classifyAccurate",
+    "pages/detail/detail",
+    "pages/list/list",
+    "pages/filmReviewList/filmReviewList",
+    "pages/filmReviewDetail/filmReviewDetail",
+    "pages/boxOffice/boxOffice"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "基因数据",
+    "backgroundColor": "#000000",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "推荐",
+      "iconPath":"img/board.png",
+      "selectedIconPath":"img/board-actived.png"
+    }, {
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath":"img/note.png",
+      "selectedIconPath":"img/note-actived.png"
+    }, {
+      "pagePath": "pages/boxOffice/boxOffice",
+      "text": "票房",
+      "iconPath":"img/search.png",
+      "selectedIconPath":"img/search-actived.png"
+    }, {
+      "pagePath": "pages/search/search",
+      "text": "搜索",
+      "iconPath":"img/search.png",
+      "selectedIconPath":"img/search-actived.png"
+    }]
+  }
+}

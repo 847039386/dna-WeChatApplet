@@ -1,0 +1,74 @@
+<!--轮播-->
+<template name="home-show-swiper">
+    <view class="section section_gap swiper">
+        <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block  wx:for="{{swipers.data}}" wx:key="swipers" wx:for-item="item">
+                <swiper-item bindtap="goFireDetail" data-content="{{item.content }}" data-title="{{item.title}}" data-author="{{item.author}}" data-time="{{swipers.update_time}}">                       
+                    <view class="abs">{{item.title}}</view>
+                    <image mode="center" style="width:100%;" src="{{item.thumb_url}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</template>
+
+<!--最新热门-->
+<template name="home-show-it">
+    <view class="weui-cells weui-cells_after-title bm-10">
+        <navigator url="../list/list?_type=rm" class="weui-cell weui-cell-boxx  weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">最新热门</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">更多</view>
+        </navigator>
+        <scroll-view scroll-x="true"  class="list-hot1" style="width: 100%">
+            <navigator class="single"  wx:for="{{datas}}" wx:key="datas" wx:for-item="data" url="../detail/detail?id={{data._id}}">
+                <view>
+                    <image class="weui-media-box__thumb" src="{{data.poster_url}}"></image>
+                    <view class="title">{{data.name}}</view>
+                </view>
+            </navigator>
+        </scroll-view>     
+    </view>
+</template>
+
+
+<!--仿ios-->
+<template name="home-show-iost">
+    <view class="weui-cells weui-cells_after-title">
+        <scroll-view scroll-x="true"  class="list-hot2" style="width: 100%">
+            <navigator url="../filmReviewList/filmReviewList" class="f_ios_tj "><image src="../../img/gg_fuhei.jpg"></image></navigator>
+            <navigator url="../list/list?_type=douban_ry" class="f_ios_tj"><image src="../../img/gg_douban.jpg"></image></navigator>
+            <navigator url="../list/list?_type=rm" class="f_ios_tj"><image src="../../img/gg_jinrituijian.jpg"></image></navigator>
+            <navigator url="../list/list?_type=imdb_ry" class="f_ios_tj"><image src="../../img/gg_imdb.jpg"></image></navigator>
+        </scroll-view>     
+    </view>
+</template>
+
+
+
+
+
+<!--腹黑电影-->
+<template name="home-show-filmRes">
+    <view class="weui-panel bm-10">
+        <navigator url="../filmReviewList/filmReviewList">
+            <view class="weui-panel__hd f-o">
+                <view class="f-l">腹黑电影</view>
+                <view class="f-r">更多</view>
+            </view>
+        </navigator>
+        <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_small-appmsg">
+                <view class="weui-cells weui-cells_in-small-appmsg">
+                    <view  wx:for="{{filmReviews.data}}" wx:key="filmReviews" wx:for-item="item" bindtap="goFireDetail" data-content="{{item.content }}" data-title="{{item.title}}" data-author="{{item.author}}" data-time="{{filmReviews.update_time}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        <view class="weui-cell__bd weui-cell_primary">
+                            <view class="fh-item">{{item.title}} </view>
+                        </view>
+                        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                    </view>
+                            
+                </view>
+            </view>                
+        </view>        
+    </view>
+</template>

@@ -1,0 +1,6 @@
+.weui-media-box__title{ font-size: 11pt; }
+.weui-media-box__desc { font-size: 10pt; line-height: 1.5 }
+.weui-media-box__hd_in-appmsg{ height: 72px; }
+
+.comment_count{ color: green; }
+.score{ color: orange; }
