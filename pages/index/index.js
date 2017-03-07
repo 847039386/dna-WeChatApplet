@@ -63,7 +63,7 @@ Page({
     
     wx.navigateTo({
       url: '../filmReviewDetail/filmReviewDetail',
-     })
+    })
   }
 
 })

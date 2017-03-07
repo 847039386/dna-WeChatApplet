@@ -36,10 +36,18 @@
 <template name="home-show-iost">
     <view class="weui-cells weui-cells_after-title">
         <scroll-view scroll-x="true"  class="list-hot2" style="width: 100%">
-            <navigator url="../filmReviewList/filmReviewList" class="f_ios_tj "><image src="../../img/gg_fuhei.jpg"></image></navigator>
-            <navigator url="../list/list?_type=douban_ry" class="f_ios_tj"><image src="../../img/gg_douban.jpg"></image></navigator>
-            <navigator url="../list/list?_type=rm" class="f_ios_tj"><image src="../../img/gg_jinrituijian.jpg"></image></navigator>
-            <navigator url="../list/list?_type=imdb_ry" class="f_ios_tj"><image src="../../img/gg_imdb.jpg"></image></navigator>
+            <navigator url="../filmReviewList/filmReviewList" class="f_ios_tj ">
+                <image src="http://data.fitvdna.com/images/gg_fuhei.jpg"></image>
+            </navigator>
+            <navigator url="../list/list?_type=douban_ry" class="f_ios_tj">
+                <image src="http://data.fitvdna.com/images/gg_douban.jpg"></image>
+            </navigator>
+            <navigator url="../list/list?_type=rm" class="f_ios_tj">
+                <image src="http://data.fitvdna.com/images/gg_jinrituijian.jpg"></image>
+            </navigator>
+            <navigator url="../list/list?_type=imdb_ry" class="f_ios_tj">
+                <image src="http://data.fitvdna.com/images/gg_imdb.jpg"></image>
+            </navigator>
         </scroll-view>     
     </view>
 </template>

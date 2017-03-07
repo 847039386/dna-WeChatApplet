@@ -17,7 +17,7 @@ Page({
       
   },
   getByBoxOffice :function(){
-    let _this = this;  
+    var _this = this;  
     app.fitvdna.findDateBoxOffice(_this.data.date_time).then(res => {    
         this.setData({
             movies : res.data.movies
@@ -31,7 +31,7 @@ Page({
     this.getByBoxOffice()
   },
   getMovie :function(e){
-      let id = e.currentTarget.dataset.id;
+      var id = e.currentTarget.dataset.id;
       app.fitvdna.findByBoxOfficeIdToMovie(id).then(res => {    
           if(res.statusCode == 200){ 
               wx.navigateTo({

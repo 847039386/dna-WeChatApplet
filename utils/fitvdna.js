@@ -64,7 +64,7 @@ const URI='https://data.fitvdna.com/v1'
  */
 function findDateBoxOffice(date){
 	date = date || 0 ;
- 	let url = `${URI}/cateye/${date}`
+ 	var url = `${URI}/cateye/${date}`
  	return new Promise((resolve,reject)=>{
  		wx.request({
  			url:url,
@@ -81,7 +81,7 @@ function findDateBoxOffice(date){
  * @return {Promise}   包含抓取任务的Promise
  */
 function findByBoxOfficeIdToMovie(id){
- 	let url = `${URI}/boxOffice/${id}`
+ 	var url = `${URI}/boxOffice/${id}`
  	return new Promise((resolve,reject)=>{
  		wx.request({
  			url:url,
